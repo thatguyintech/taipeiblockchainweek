@@ -9,10 +9,16 @@ const config: HardhatUserConfig = {
     goerli: {
       url: process.env.ALCHEMY_API_URL,
       accounts: [ process.env.PRIVATE_KEY! ],
-      blockGasLimit: 10_000_000,
+      blockGasLimit: 20_000_000,
+      gasPrice: 2_000_000_000,
+    },
+    mumbai: {
+      url: process.env.ALCHEMY_MUMBAI_URL,
+      accounts: [ process.env.PRIVATE_KEY! ],
+      blockGasLimit: 20_000_000,
+      gasPrice: 2_000_000_000,
     }
   },
-  defaultNetwork: "goerli",
 };
 
 export default config;
