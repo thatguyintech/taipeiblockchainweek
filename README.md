@@ -1,13 +1,10 @@
-# Sample Hardhat Project
+Check out how the NFT staker contracts interact with each other!
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+`contracts/TBWCoin.sol`
+`contracts/TBWNFT.sol`
+`contracts/TBWStaker.sol`
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
+npm i
 npx hardhat run scripts/deploy.ts
 ```
