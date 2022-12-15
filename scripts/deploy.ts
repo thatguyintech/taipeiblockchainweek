@@ -31,11 +31,11 @@ async function main() {
 
   // Test the staking contract
   console.log("approving the staking contract to stake NFTs...");
-  await nft.approve(staker.address, 0)
+  await nft.approve(staker.address, 0, {gasLimit: 5_000_000})
 
   console.log("try staking...");
   console.log("nft tokenid 0 is owned by: ", await nft.ownerOf(0));
-  await staker.stake([0]);
+  await staker.stake([0], {gasLimit: 5_000_000});
   console.log("waiting 10 seconds...");
   await sleep(10000);
   console.log("tokens earned: ", await staker.available(rewardWalletAddress));
